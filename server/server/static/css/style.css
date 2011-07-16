@@ -1,0 +1,86 @@
+@font-face {
+  font-family: GraublauWebBold;
+  src: url(/static/fonts/GraublauWebBold.otf) format('opentype');
+}
+
+body {
+    font-family: "helvetica neue",arial,helvetica,sans-serif;
+    color: #444444;
+    font-size: 80%;
+}
+
+h2 {
+    letter-spacing: 0.6px;
+    text-shadow: 0 2px 0 whitesmoke;
+    margin: 0;
+}
+
+#main {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  
+  display: box;
+  box-orient: horizontal;
+}
+
+#main > div {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1; 
+}
+
+#main > div:nth-child(2), #main > div:nth-child(3) {
+    margin-left: 2em;
+}
+
+#graph {
+    display: block;
+    height: 400px;
+    width: 600px;
+}
+
+#waiting, #main {
+    background: white;
+    padding: 1em;
+}
+
+.hidden {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+/* table */
+
+table {
+    font-family:arial;
+    background-color: #CDCDCD;
+    margin:10px 0pt 15px;
+    text-align: left;
+}
+thead tr th {
+    background-color: #e6EEEE;
+    border: 1px solid #FFF;
+    padding: 4px;
+}
+tbody td {
+    color: #3D3D3D;
+    padding: 4px;
+    background-color: #FFF;
+    vertical-align: top;
+    text-overflow: ellipsis;
+}
+tr.odd td {
+    background-color: whitesmoke;
+}
+
+pre {
+    padding: 1em;
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>talisker</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="${request.static_url('server:static/favicon.ico')}">
+  <link rel="apple-touch-icon" href="${request.static_url('server:static/apple-touch-icon.png')}"/>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Neuton|Nobile:regular,i,b,bi&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="${request.static_url('server:static/css/style.css?v=2')}">
+  <link rel="stylesheet" href="${request.static_url('server:static/css/shCore.css?v=2')}">
+  <link rel="stylesheet" href="${request.static_url('server:static/css/shThemeDefault.css?v=2')}">
+  <script src="${request.static_url('server:static/js/libs/modernizr-1.7.min.js')}"></script>
+
+</head>
+
+<body>
+    <div id="waiting">
+        <h2>Waiting...</h2>
+        <p>No requests yet.</p>
+    </div>
+    <div id="main">
+        <div>
+            <h2>Requests</h2>
+            <table id="listing">
+                <thead>
+                    <tr>
+                        <th>Request</th>
+                        <th>Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <p class="nav"><a href="#" class="graph">Show graph</a></p>
+        </div>
+        <div id="graph-wrapper">
+            <h2>Time</h2>
+            <div id="graph"></div>
+        </div>
+        <div id="output-wrapper" class="hidden">
+            <h2></h2>
+        </div>
+        <div id="code-wrapper" class="hidden">
+            <h2></h2>
+            <pre></pre>
+        </div>
+    </div>
+
+  <script src="${request.static_url('server:static/js/jquery.min.js')}"></script>
+  <script src="${request.static_url('server:static/js/socket.io.js')}"></script>
+  <script src="${request.static_url('server:static/flot/jquery.flot.js')}"></script>
+  <script src="${request.static_url('server:static/js/jquery.tablesorter.min.js')}"></script>
+  <script src="${request.static_url('server:static/js/plugins.js')}"></script>
+  <script src="${request.static_url('server:static/js/shCore.js')}"></script>
+  <script src="${request.static_url('server:static/js/shBrushPython.js')}"></script>
+  <script src="${request.static_url('server:static/js/script.js')}"></script>
+</body>
+</html>
