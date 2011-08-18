@@ -167,9 +167,6 @@ $(document).ready(function() {
                 points: { show: true } },
                 grid: { hoverable: true, clickable: true }
             });
-            if (!$("#waiting:hidden").length) {
-                $("#waiting").slideUp();
-            }
         }
     });
 

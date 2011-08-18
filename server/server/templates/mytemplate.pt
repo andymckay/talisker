@@ -17,10 +17,6 @@
 </head>
 
 <body>
-    <div id="waiting">
-        <h2>Waiting...</h2>
-        <p>No requests yet.</p>
-    </div>
     <div id="main">
         <div>
             <h2>Requests</h2>

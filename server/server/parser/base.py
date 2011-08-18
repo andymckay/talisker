@@ -91,6 +91,8 @@ class Collection(object):
         
     def update(self):
         flag = False
+        if not self.directory.endswith(os.sep):
+            self.directory = self.directory + os.sep
         for filename in glob.glob('%s*.prof' % self.directory):
             for b in self.blacklist:
                 if b.match(filename[len(self.directory):]):

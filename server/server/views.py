@@ -1,4 +1,5 @@
 import os
+import sys
 
 from pyramid.response import Response
 from pyramid_socketio.io import SocketIOContext, socketio_manage
@@ -6,24 +7,15 @@ import gevent
 
 from parser import base
 
-col = base.Collection('/tmp/output/', blacklist=['^media\.',])
+col = None
+
+def create_base(path):
+    global col
+    col = base.Collection(path, blacklist=['^media\.',])
 
 def root(request):
     return {}
 
-def listing(request):
-    return col.listing()
-
-def summary(request):
-    return 
-
-def request(request):
-    key = request.GET.get('key')
-    if 'num' in request.GET:
-        num = int(request.GET.get('num'))
-        return col.requests[key].stats[num].summary()
-    
-    return col.requests[key].all()
 
 class ConnectIOContext(SocketIOContext):
     def msg_connect(self, msg):
